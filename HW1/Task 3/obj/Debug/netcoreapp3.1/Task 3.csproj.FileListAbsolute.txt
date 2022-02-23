@@ -1,0 +1,14 @@
+C:\Users\mway2\source\repos\ConsoleApp8\Task 3\bin\Debug\netcoreapp3.1\Task 3.exe
+C:\Users\mway2\source\repos\ConsoleApp8\Task 3\bin\Debug\netcoreapp3.1\Task 3.deps.json
+C:\Users\mway2\source\repos\ConsoleApp8\Task 3\bin\Debug\netcoreapp3.1\Task 3.runtimeconfig.json
+C:\Users\mway2\source\repos\ConsoleApp8\Task 3\bin\Debug\netcoreapp3.1\Task 3.runtimeconfig.dev.json
+C:\Users\mway2\source\repos\ConsoleApp8\Task 3\bin\Debug\netcoreapp3.1\Task 3.dll
+C:\Users\mway2\source\repos\ConsoleApp8\Task 3\bin\Debug\netcoreapp3.1\Task 3.pdb
+C:\Users\mway2\source\repos\ConsoleApp8\Task 3\obj\Debug\netcoreapp3.1\Task 3.csproj.AssemblyReference.cache
+C:\Users\mway2\source\repos\ConsoleApp8\Task 3\obj\Debug\netcoreapp3.1\Task 3.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\mway2\source\repos\ConsoleApp8\Task 3\obj\Debug\netcoreapp3.1\Task 3.AssemblyInfoInputs.cache
+C:\Users\mway2\source\repos\ConsoleApp8\Task 3\obj\Debug\netcoreapp3.1\Task 3.AssemblyInfo.cs
+C:\Users\mway2\source\repos\ConsoleApp8\Task 3\obj\Debug\netcoreapp3.1\Task 3.csproj.CoreCompileInputs.cache
+C:\Users\mway2\source\repos\ConsoleApp8\Task 3\obj\Debug\netcoreapp3.1\Task 3.dll
+C:\Users\mway2\source\repos\ConsoleApp8\Task 3\obj\Debug\netcoreapp3.1\Task 3.pdb
+C:\Users\mway2\source\repos\ConsoleApp8\Task 3\obj\Debug\netcoreapp3.1\Task 3.genruntimeconfig.cache
