@@ -27,26 +27,28 @@ namespace Task_3
                     Console.WriteLine($"Ascending numbers: {B},{C},{A}");
                 }
             }
-            else if (A > B && A < C)
+            else if (B > A && B > C)
             {
-                Console.WriteLine($"Ascending numbers: {B},{A},{C}");
-            }
-            else if (A < B && A < C)
-            {
-              if (B > C)
+                if (A > C)
                 {
-                Console.WriteLine($"Ascending numbers: {A},{C},{B}");
+                    Console.WriteLine($"Ascending numbers: {C},{A},{B}");
                 }
-              else
+                else
                 {
-                Console.WriteLine($"Ascending numbers: {A},{B},{C}");
+                    Console.WriteLine($"Ascending numbers: {A},{C},{B}");
                 }
             }
-            else 
+            else if (C > A && C > B)
             {
-                Console.WriteLine($"Ascending numbers: {C},{A},{B}");
+                if ( A > B)
+                {
+                    Console.WriteLine($"Ascending numbers: {B},{A},{C}");
+                }
+                else
+                {
+                    Console.WriteLine($"Ascending numbers: {A},{B},{C}");
+                }
             }
-
         }
     }
 }
