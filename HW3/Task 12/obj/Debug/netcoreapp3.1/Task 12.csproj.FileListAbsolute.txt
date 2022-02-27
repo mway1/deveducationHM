@@ -1,0 +1,14 @@
+C:\Users\mway2\source\repos\HW3_Kuzmenko\Task 12\bin\Debug\netcoreapp3.1\Task 12.exe
+C:\Users\mway2\source\repos\HW3_Kuzmenko\Task 12\bin\Debug\netcoreapp3.1\Task 12.deps.json
+C:\Users\mway2\source\repos\HW3_Kuzmenko\Task 12\bin\Debug\netcoreapp3.1\Task 12.runtimeconfig.json
+C:\Users\mway2\source\repos\HW3_Kuzmenko\Task 12\bin\Debug\netcoreapp3.1\Task 12.runtimeconfig.dev.json
+C:\Users\mway2\source\repos\HW3_Kuzmenko\Task 12\bin\Debug\netcoreapp3.1\Task 12.dll
+C:\Users\mway2\source\repos\HW3_Kuzmenko\Task 12\bin\Debug\netcoreapp3.1\Task 12.pdb
+C:\Users\mway2\source\repos\HW3_Kuzmenko\Task 12\obj\Debug\netcoreapp3.1\Task 12.csproj.AssemblyReference.cache
+C:\Users\mway2\source\repos\HW3_Kuzmenko\Task 12\obj\Debug\netcoreapp3.1\Task 12.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\mway2\source\repos\HW3_Kuzmenko\Task 12\obj\Debug\netcoreapp3.1\Task 12.AssemblyInfoInputs.cache
+C:\Users\mway2\source\repos\HW3_Kuzmenko\Task 12\obj\Debug\netcoreapp3.1\Task 12.AssemblyInfo.cs
+C:\Users\mway2\source\repos\HW3_Kuzmenko\Task 12\obj\Debug\netcoreapp3.1\Task 12.csproj.CoreCompileInputs.cache
+C:\Users\mway2\source\repos\HW3_Kuzmenko\Task 12\obj\Debug\netcoreapp3.1\Task 12.dll
+C:\Users\mway2\source\repos\HW3_Kuzmenko\Task 12\obj\Debug\netcoreapp3.1\Task 12.pdb
+C:\Users\mway2\source\repos\HW3_Kuzmenko\Task 12\obj\Debug\netcoreapp3.1\Task 12.genruntimeconfig.cache
