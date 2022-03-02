@@ -28,5 +28,22 @@ namespace All_Task
             }
             return count;
         }
+
+        public static int OutputLargestDivisor(int a)
+        {
+            int maxDivisor = 0;
+            for (int i = 1; i < a; i++)
+            {
+                if (a % i == 0 && i != a)
+                {
+                    if (i > maxDivisor)
+                    {
+                        maxDivisor = i;
+                        i++;
+                    }
+                }
+            }
+            return maxDivisor;
+        }
     }
 }
