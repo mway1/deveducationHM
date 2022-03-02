@@ -65,5 +65,21 @@ namespace All_Task
             }
             return sum;
         }
+
+        public static int GetFromFibonacciSeries(int n)
+        {
+            int num1 = 1;
+            int num2 = 1;
+            int i = 0;
+            int sum = 0;
+            while (i < n - 2)
+            {
+                sum = num1 + num2;
+                num1 = num2;
+                num2 = sum;
+                i++;
+            }
+            return num2;
+        }
     }
 }
