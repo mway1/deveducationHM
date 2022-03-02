@@ -119,6 +119,22 @@ namespace All_Task
             }
             return tmp;
         }
+        
+        public static int FindNumberOfOdd(int a)
+        {
+            int tmp;
+            int count = 0;
+            while (a != 0)
+            {
+                tmp = a % 10;
+                A /= 10;
+                if (tmp % 2 != 0)
+                {
+                    count++;
+                }
+            }
+            return count;
+        }
 
 
     }
