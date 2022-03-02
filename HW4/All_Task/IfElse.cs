@@ -32,7 +32,7 @@ namespace All_Task
             }
             else if (x < 0 && y > 0)
             {
-                result = "SECOND"; 
+                result = "SECOND";
             }
             else if (x < 0 && y < 0)
             {
@@ -44,6 +44,121 @@ namespace All_Task
             }
             return result;
         }
+        public static string GetTheNumberInWords(int number)
+        {
+            string result = " ";
+            string Dec = " ";
+            string Un = " ";
+            int Decade = number / 10;
+            int Units = number % 10;
 
+            if (number > 19)
+            {
+                switch (Decade)
+                {
+                    case 2:
+                        Dec = "Двадцать";
+                        break;
+                    case 3:
+                        Dec = "Тридцать";
+                        break;
+                    case 4:
+                        Dec = "Сорок";
+                        break;
+                    case 5:
+                        Dec = "Пятьдесят";
+                        break;
+                    case 6:
+                        Dec = "Шестьдесят";
+                        break;
+                    case 7:
+                        Dec = "Семьдесят";
+                        break;
+                    case 8:
+                        Dec = "Восемьдесят";
+                        break;
+                    case 9:
+                        Dec = "Девяносто";
+                        break;
+
+                }
+                switch (Units)
+                {
+                    case 1:
+                        Un = "один";
+                        break;
+                    case 2:
+                        Un = "два";
+                        break;
+                    case 3:
+                        Un = "три";
+                        break;
+                    case 4:
+                        Un = "четыре";
+                        break;
+                    case 5:
+                        Un = "пять";
+                        break;
+                    case 6:
+                        Un = "шесть";
+                        break;
+                    case 7:
+                        Un = "семь";
+                        break;
+                    case 8:
+                        Un = "восемь";
+                        break;
+                    case 9:
+                        Un = "девять";
+                        break;
+                }
+                result = Dec +" "+  Un;
+            }
+            else
+            {
+                if (number == 10)
+                {
+                    result = "Десять";
+                }
+                else if (number == 11)
+                {
+                    result = "Одиннадцать";
+                }
+                else if (number == 12)
+                {
+                    result = "Двенадцать";
+                }
+                else if (number == 13)
+                {
+                    result = "Тринадцать";
+                }
+                else if (number == 14)
+                {
+                    result = "Четырнадцать";
+                }
+                else if (number == 15)
+                {
+                    result = "Пятнадцать";
+                }
+                else if (number == 16)
+                {
+                    result = "Шестнадцать";
+                }
+                else if (number == 17)
+                {
+                    result = "Семнадцать";
+                }
+                else if (number == 18)
+                {
+                    result = "Восемнадцать";
+                }
+                else if (number == 19)
+                {
+                    result = "Девятнадцать";
+                }
+            }
+           return result;
+
+        }
     }
 }
