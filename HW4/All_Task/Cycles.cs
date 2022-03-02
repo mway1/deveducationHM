@@ -127,7 +127,7 @@ namespace All_Task
             while (a != 0)
             {
                 tmp = a % 10;
-                A /= 10;
+                a /= 10;
                 if (tmp % 2 != 0)
                 {
                     count++;
@@ -135,7 +135,7 @@ namespace All_Task
             }
             return count;
         }
-         public static int PrintNumberInReverse(int a)
+        public static int PrintNumberInReverse(int a)
         {
             int tmp;
             int NewNum = 0;
@@ -147,6 +147,27 @@ namespace All_Task
                 a /= 10;
             }
             return NewNum;
+        }
+        public static bool FindOutIdenticalNum(int a, int b)
+        {
+            int tmp1 = 0;
+            int tmp2 = 0;
+            bool res = false;
+
+            while (b != 0)
+            {
+                tmp1 = a % 10;
+                for (int i = b; i != 0; i /= 10)
+                {
+                    tmp2 = i % 10;
+                    if (tmp1 == tmp2)
+                    {
+                        res = true;
+                    }
+                }
+                a /= 10;
+            }
+            return res;
         }
 
 
