@@ -23,5 +23,27 @@ namespace All_Task
             }
             return result;
         }
+        public static string DetermineInWhichQuarter(int x, int y)
+        {
+            string result;
+            if (x > 0 && y > 0)
+            {
+                result = "FIRST";
+            }
+            else if (x < 0 && y > 0)
+            {
+                result = "SECOND"; 
+            }
+            else if (x < 0 && y < 0)
+            {
+                result = "THIRD";
+            }
+            else
+            {
+                result = "FOURTH";
+            }
+            return result;
+        }
+
     }
 }
