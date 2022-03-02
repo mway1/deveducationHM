@@ -6,7 +6,7 @@ namespace All_Task
 {
     static class Cycles
     {
-        public static int RaiseNumberToDegree(int a, int b)
+        public static int RaiseNumberToDegree(int a, int b)//HW3-Task1
         {
             int number = 1;
             for (int i = 0; i < b; i++)
@@ -16,7 +16,7 @@ namespace All_Task
             return number;
         }
 
-        public static int GetCountPositiveNum(int a)
+        public static int GetCountPositiveNum(int a)//HW3-Task3
         {
             int count = 0;
             for (int i = 1; i < a; i++)
@@ -29,7 +29,7 @@ namespace All_Task
             return count;
         }
 
-        public static int OutputLargestDivisor(int a)
+        public static int OutputLargestDivisor(int a)//HW3-Task4
         {
             int maxDivisor = 0;
             for (int i = 1; i < a; i++)
@@ -46,7 +46,7 @@ namespace All_Task
             return maxDivisor;
         }
 
-        public static int PrintSumNumFromRange(int a, int b)
+        public static int PrintSumNumFromRange(int a, int b)//HW3-Task5
         {
             int sum = 0;
             int tmp;
@@ -66,7 +66,7 @@ namespace All_Task
             return sum;
         }
 
-        public static int GetFromFibonacciSeries(int n)
+        public static int GetFromFibonacciSeries(int n)//HW3-Task6
         {
             int num1 = 1;
             int num2 = 1;
@@ -81,8 +81,8 @@ namespace All_Task
             }
             return num2;
         }
-        
-        public static int GetDivisorFromEuclidAlgo(int a, int b)  
+
+        public static int GetDivisorFromEuclidAlgo(int a, int b)//HW3-Task7
         {
             int nod;
             while (a != 0 && b != 0)
@@ -99,7 +99,8 @@ namespace All_Task
             nod = a + b;
             return nod;
         } 
-        public static int GetNumberByHalfDivision(int n)
+
+        public static int GetNumberByHalfDivision(int n)//HW3-Task8
         {
             int a = 0;
             int b = n;
@@ -119,8 +120,8 @@ namespace All_Task
             }
             return tmp;
         }
-        
-        public static int FindNumberOfOdd(int a)
+
+        public static int FindNumberOfOdd(int a)//HW3-Task9
         {
             int tmp;
             int count = 0;
@@ -135,7 +136,8 @@ namespace All_Task
             }
             return count;
         }
-        public static int PrintNumberInReverse(int a)
+
+        public static int PrintNumberInReverse(int a)//HW3-Task10
         {
             int tmp;
             int NewNum = 0;
@@ -148,7 +150,8 @@ namespace All_Task
             }
             return NewNum;
         }
-        public static bool FindOutIdenticalNum(int a, int b)
+
+        public static bool FindOutIdenticalNum(int a, int b)//HW3-Task12
         {
             int tmp1 = 0;
             int tmp2 = 0;
