@@ -81,5 +81,25 @@ namespace All_Task
             }
             return num2;
         }
+        
+        public static int GetDivisorFromEuclidAlgo(int a, int b)
+        {
+            int nod;
+            while (a != 0 && b != 0)
+            {
+                if (a > b)
+                {
+                    a = a % b;
+                }
+                else
+                {
+                    b = b % a;
+                }
+            }
+            nod = a + b;
+            return nod;
+        } 
+
+
     }
 }
