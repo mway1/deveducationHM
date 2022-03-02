@@ -16,6 +16,13 @@ namespace All_Task
             double x = ((c - b) / a);
             return x;
         }
+        public static string GetEquationOfStraightLine(int x1, int y1, int x2, int y2)
+        {
+            int A = (y2 - y1) / (x2 - x1);
+            int B = y2 - (A * x2);
+            string result = "y="+ A + "*x+" + B + "*x";
+            return result;
+        }
 
     }
 }
