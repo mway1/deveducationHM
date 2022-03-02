@@ -6,7 +6,7 @@ namespace All_Task
 {
     static class IfElse
     {
-        public static int GetTheResultOfMathActions(int a, int b)
+        public static int GetTheResultOfMathActions(int a, int b)//HW2-Task1
         {
             int result;
             if (a > b)
@@ -23,7 +23,7 @@ namespace All_Task
             }
             return result;
         }
-        public static string DetermineInWhichQuarter(int x, int y)
+        public static string DetermineInWhichQuarter(int x, int y)//HW2-Task2
         {
             string result;
             if (x > 0 && y > 0)
@@ -44,7 +44,7 @@ namespace All_Task
             }
             return result;
         }
-        public static string GetTheNumberInWords(int number)
+        public static string GetTheNumberInWords(int number)//HW2-Task5
         {
             string result = " ";
             string Dec = " ";
