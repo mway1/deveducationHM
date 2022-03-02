@@ -82,7 +82,7 @@ namespace All_Task
             return num2;
         }
         
-        public static int GetDivisorFromEuclidAlgo(int a, int b)
+        public static int GetDivisorFromEuclidAlgo(int a, int b)  
         {
             int nod;
             while (a != 0 && b != 0)
@@ -99,6 +99,26 @@ namespace All_Task
             nod = a + b;
             return nod;
         } 
+        public static int GetNumberByHalfDivision(int n)
+        {
+            int a = 0;
+            int b = n;
+            int tmp = 0;
+
+            while (Math.Pow(tmp, 3) != n)
+            {
+                tmp = (a + b) / 2;
+                if (Math.Pow(tmp, 3) < n)
+                {
+                    a = tmp;
+                }
+                else
+                {
+                    b = tmp;
+                }
+            }
+            return tmp;
+        }
 
 
     }
