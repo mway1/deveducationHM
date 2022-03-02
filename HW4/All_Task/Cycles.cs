@@ -45,5 +45,25 @@ namespace All_Task
             }
             return maxDivisor;
         }
+
+        public static int PrintSumNumFromRange(int a, int b)
+        {
+            int sum = 0;
+            int tmp;
+            if (b < a)
+            {
+                tmp = b;
+                b = a;
+                a = tmp;
+            }
+            for (int i = a; i < b; i++)
+            {
+                if (i % 7 == 0)
+                {
+                    sum += i;
+                }
+            }
+            return sum;
+        }
     }
 }
