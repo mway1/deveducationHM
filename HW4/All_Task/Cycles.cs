@@ -135,6 +135,19 @@ namespace All_Task
             }
             return count;
         }
+         public static int PrintNumberInReverse(int a)
+        {
+            int tmp;
+            int NewNum = 0;
+            while (a != 0)
+            {
+                tmp = a % 10;
+                NewNum *= 10;
+                NewNum += tmp;
+                a /= 10;
+            }
+            return NewNum;
+        }
 
 
     }
