@@ -17,7 +17,6 @@ namespace Task_4
                     if (i > maxDivisor)
                     {
                         maxDivisor = i;
-                        i++;
                     }
                 }
             }
