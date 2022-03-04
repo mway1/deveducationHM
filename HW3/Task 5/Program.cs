@@ -11,24 +11,18 @@ namespace Task_5
             Console.Write("Enter number B: ");
             int B = Convert.ToInt32(Console.ReadLine());
             int sum = 0;
-            if (B > A)
+            int tmp;
+            if (B < A)
             {
-                for(int i=A; i<B; i++)
-                {
-                    if (i % 7 == 0)
-                    {
-                        sum += i;
-                    }
-                }
+                tmp = B;
+                B = A;
+                A = tmp;
             }
-            else
+            for (int i = A; i < B; i++)
             {
-                for (int i = B; i < A; i++)
+                if (i % 7 == 0)
                 {
-                    if (i % 7 == 0)
-                    {
-                        sum += i;
-                    }
+                    sum += i;
                 }
             }
             Console.WriteLine($"The sum of numbers divisible by 7: {sum}");
