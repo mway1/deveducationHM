@@ -20,7 +20,7 @@ namespace All_Task
         {
             int A = (y2 - y1) / (x2 - x1);
             int B = y2 - (A * x2);
-            string result = "y="+ A + "*x+" + B + "*x";
+            string result = $"y={A}*x+({B})*x";
             return result;
         }
 
