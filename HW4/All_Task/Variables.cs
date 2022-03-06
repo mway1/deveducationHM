@@ -11,6 +11,7 @@ namespace All_Task
             int result = (((5 * a) + (b * b)) / (b - a));
             return result;
         }
+
         public static double GetTheRootOfTheEquation(double a, double b, double c)//HW1-Task2
         {
             double x = ((c - b) / a);

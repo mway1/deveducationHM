@@ -100,7 +100,7 @@ namespace All_Task
             return nod;
         } 
 
-        public static int GetNumberByHalfDivision(int n)//HW3-Task8
+        public static int FindRootByHalfDivision(int n)//HW3-Task8 
         {
             int a = 0;
             int b = n;
@@ -119,7 +119,7 @@ namespace All_Task
                 }
             }
             return tmp;
-        }
+        }          
 
         public static int FindNumberOfOdd(int a)//HW3-Task9
         {

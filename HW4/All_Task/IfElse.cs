@@ -39,7 +39,7 @@ namespace All_Task
                 result = "THIRD";
             }
             else
-            {
+            {                             //Поменять условие
                 result = "FOURTH";
             }
             return result;
