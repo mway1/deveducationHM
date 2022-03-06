@@ -44,6 +44,34 @@ namespace All_Task
             }
             return result;
         }
+
+
+        public static int FindDiscriminant(int a,int b,int c)//HW2-Task4(Поиск дискриминанта)
+        {
+            return b * b - 4 * a * c;
+        }
+        
+        public static string SolutionOfEquation(int a, int b,int c)//HW2-Task4 
+        {
+
+            double d = FindDiscriminant(a,b,c);
+
+            if (d < 0)
+            {
+                return "The equation has no roots";
+            }
+            else if (d == 0)
+            {
+                return $"x = {(-b) / (2 * a)}";
+            }
+            else
+            {
+                return $"x1 = {(-b - Math.Sqrt(d)) / (2 * a)}; x2 = {(-b + Math.Sqrt(d)) / (2 * a)}";
+            }
+        }
+
+
+
         public static string GetTheNumberInWords(int number)//HW2-Task5
         {
             string result = " ";
