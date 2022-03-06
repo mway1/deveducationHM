@@ -13,13 +13,17 @@ namespace All_Task
             rez2 = a & b;
         }
 
-
         public static int GetSolvingTheFormula(int a, int b)//HW1-Task2
         {
             int result = (((5 * a) + (b * b)) / (b - a));
             return result;
         }
 
+        public static void SwapNumbers(int a, int b,out int newA,out int newB)//HW1-Task3
+        {
+            newA = b;
+            newB = a;
+        }
         public static double GetTheRootOfTheEquation(double a, double b, double c)//HW1-Task4
         {
             double x = ((c - b) / a);
