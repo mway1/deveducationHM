@@ -6,13 +6,21 @@ namespace All_Task
 {
     static class Variables
     {
-        public static int GetSolvingTheFormula(int a, int b)//HW1-Task1
+
+        public static void GetResultsDivRemainder(int a, int b,out int rez1,out int rez2)//HW1-Task1
+        {
+            rez1 = a / b;
+            rez2 = a & b;
+        }
+
+
+        public static int GetSolvingTheFormula(int a, int b)//HW1-Task2
         {
             int result = (((5 * a) + (b * b)) / (b - a));
             return result;
         }
 
-        public static double GetTheRootOfTheEquation(double a, double b, double c)//HW1-Task2
+        public static double GetTheRootOfTheEquation(double a, double b, double c)//HW1-Task4
         {
             double x = ((c - b) / a);
             return x;
