@@ -47,5 +47,30 @@ namespace All_Task
             }
             return min;
         }
+
+        public static void SolveTask2()
+        {
+            Console.Write("Enter the length of the array: ");
+            int[] array = CreateAnArrayWithRandom(Convert.ToInt32(Console.ReadLine()));
+            Console.Write($"Array: ");
+            OutputAnArrayToTheConsole(array);
+            Console.Write($"\nMaximum array element: {GetMaxElementArray(array)}");
+        }
+
+        public static int GetMaxElementArray(int[] a)
+        {
+
+            int max = a[0];
+            for (int i = 1; i < a.Length; i++)
+            {
+                if (a[i] > max)
+                {
+                    max = a[i];
+                }
+            }
+            return max;
+        }
+
+
     }
 }
