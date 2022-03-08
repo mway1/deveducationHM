@@ -95,6 +95,32 @@ namespace All_Task
             }
             return minIndex;
         }
+        
+        public static void SolveTask4()
+        {
+            Console.Write("Enter the length of the array: ");
+            int[] array = CreateAnArrayWithRandom(Convert.ToInt32(Console.ReadLine()));
+            Console.Write($"Array: ");
+            OutputAnArrayToTheConsole(array);
+            Console.Write($"\nIndex of the maximum element: {GetMaxIndexArray(array)}");
+        }
+
+        public static int GetMaxIndexArray(int[] a)
+        {
+
+            int max = a[0];
+            int maxIndex = 0;
+            for (int i = 1; i < a.Length; i++)
+            {
+                if (a[i] > max)
+                {
+                    max = a[i];
+                    maxIndex = i;
+                }
+            }
+            return maxIndex;
+        }
+
 
 
 
