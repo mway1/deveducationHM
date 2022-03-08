@@ -25,6 +25,27 @@ namespace All_Task
             }
         }
 
+        public static void SolveTask1()
+        {
+            Console.Write("Enter the length of the array: ");
+            int[] array = CreateAnArrayWithRandom(Convert.ToInt32(Console.ReadLine()));
+            Console.Write( $"Array: ");
+            OutputAnArrayToTheConsole(array);
+            Console.Write($"\nMinimum array element: {GetMinElementArray(array)}");
+        }
 
+        public static int GetMinElementArray(int[] a)
+        {
+
+            int min = a[0];
+            for (int i = 1; i < a.Length; i++)
+            {
+                if (a[i] < min)
+                {
+                    min = a[i];
+                }
+            }
+            return min;
+        }
     }
 }
