@@ -44,9 +44,61 @@ namespace All_Task
             }
             return result;
         }
+        public static int[] SortInAscendingOrder(int a, int b, int c)//HW2-Task3
+        {
+            int[] sortNum = new int[3];
+
+            if (a > b && a > c)
+            {
+                if (b > c)
+                {
+                    sortNum[0] = c;
+                    sortNum[1] = b;
+                    sortNum[2] = a;
+                }
+                else
+                {
+                    sortNum[0] = b;
+                    sortNum[1] = c;
+                    sortNum[2] = a;
+                }
+            }
+            else if (b > a && b > c)
+            {
+                if (a > c)
+                {
+                    sortNum[0] = c;
+                    sortNum[1] = a;
+                    sortNum[2] = b;
+                }
+                else
+                {
+                    sortNum[0] = a;
+                    sortNum[1] = c;
+                    sortNum[2] = b;
+                }
+            }
+            else if (c > a && c > b)
+            {
+                if (a > b)
+                {
+                    sortNum[0] = b;
+                    sortNum[1] = a;
+                    sortNum[2] = c;
+                }
+                else
+                {
+                    sortNum[0] = a;
+                    sortNum[1] = b;
+                    sortNum[2] = c;
+                }
+                
+            }
+            return sortNum;
+        }
 
 
-        public static int FindDiscriminant(int a,int b,int c)//HW2-Task4(Поиск дискриминанта)
+            public static int FindDiscriminant(int a,int b,int c)//HW2-Task4(Поиск дискриминанта)
         {
             return b * b - 4 * a * c;
         }
@@ -190,3 +242,4 @@ namespace All_Task
         }
     }
 }
+  
