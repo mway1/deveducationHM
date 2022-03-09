@@ -121,6 +121,29 @@ namespace All_Task
             return maxIndex;
         }
 
+        public static void SolveTask5()
+        {
+            Console.Write("Enter the length of the array: ");
+            int[] array = CreateAnArrayWithRandom(Convert.ToInt32(Console.ReadLine()));
+            Console.Write($"Array: ");
+            OutputAnArrayToTheConsole(array);
+            Console.Write($"\nSum of array elements with odd indexes: {GetSumElementWithOddIndexArray(array)}");
+        }
+
+        public static int GetSumElementWithOddIndexArray(int[] a)
+        {
+
+            int sumIndex = 0;
+            for (int i = 1; i < a.Length; i++)
+            {
+                if (i%2!=0)
+                {
+                    sumIndex += a[i];
+                }
+            }
+            return sumIndex;
+        }
+
 
 
 
