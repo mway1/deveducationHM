@@ -176,6 +176,30 @@ namespace All_Task
             return newArr;
         }
 
+        public static void SolveTask7()
+        {
+            Console.Write("Enter the length of the array: ");
+            int[] array = CreateAnArrayWithRandom(Convert.ToInt32(Console.ReadLine()));
+            Console.Write($"Array: ");
+            OutputAnArrayToTheConsole(array);
+            Console.Write($"\nCount of odd array elements: {GetCountOddElementOfArray(array)}");
+        }
+
+        public static int GetCountOddElementOfArray(int[] a)
+        {
+
+            int count = 0;
+            for (int i = 1; i < a.Length; i++)
+            {
+                if (a[i] % 2 != 0)
+                {
+                    count++;
+                }
+            }
+            return count;
+        }
+
+
 
 
 
