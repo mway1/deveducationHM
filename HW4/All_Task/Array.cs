@@ -4,7 +4,7 @@ using System.Text;
 
 namespace All_Task
 {
-    static class Array
+    static class ArrayTasks
     {
         public static int[] CreateAnArrayWithRandom(int count)
         {
@@ -23,6 +23,13 @@ namespace All_Task
             {
                 Console.Write(array[i] + " ");
             }
+        }
+
+        public static int[] CopyArray(int[] a)
+        {
+            int[] newArray = new int[a.Length];
+            Array.Copy(a, newArray, a.Length);
+            return newArray;
         }
 
         public static void SolveTask1()
@@ -142,6 +149,31 @@ namespace All_Task
                 }
             }
             return sumIndex;
+        }
+
+        public static void SolveTask6()
+        {
+            Console.Write("Enter the length of the array: ");
+            int[] array = CreateAnArrayWithRandom(Convert.ToInt32(Console.ReadLine()));
+            Console.Write($"Array: ");
+            OutputAnArrayToTheConsole(array);
+            int[] tmp = GetReverseOfArray(array);
+            Console.Write($"\nReverse array: ");
+            OutputAnArrayToTheConsole(tmp);
+
+        }
+
+        public static int[] GetReverseOfArray(int[] a)
+        {
+            int[] newArr = CopyArray(a);
+            for (int i = 0; i < newArr.Length / 2; i++)
+            {
+                int tmp = newArr[i];
+                newArr[i] = newArr[newArr.Length - (1 + i)];
+                newArr[newArr.Length - (1 + i)] = tmp;
+            }
+
+            return newArr;
         }
 
 
