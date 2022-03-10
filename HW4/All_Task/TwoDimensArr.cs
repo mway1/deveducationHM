@@ -110,7 +110,7 @@ namespace All_Task
             int[,] array = CreateAnTwoDimArrayWithRandom(n, m);
             Console.WriteLine("Your array: ");
             OutputAnTwoDimArrayToTheConsole(array);
-            Console.Write($"Element with mininmum index: {GetIndexOfMinElement(array)}");
+            Console.Write($"Index of min element: {GetIndexOfMinElement(array)}");
         }
 
         public static (int,int) GetIndexOfMinElement(int[,] a)
@@ -133,6 +133,39 @@ namespace All_Task
             }
             return (minIndexRows,minIndexColum);
         }
+        public static void SolveTask4()
+        {
+            Console.Write("Enter the number of rows: ");
+            int n = Convert.ToInt32(Console.ReadLine());
+            Console.Write("Enter the number of columns: ");
+            int m = Convert.ToInt32(Console.ReadLine());
+            int[,] array = CreateAnTwoDimArrayWithRandom(n, m);
+            Console.WriteLine("Your array: ");
+            OutputAnTwoDimArrayToTheConsole(array);
+            Console.Write($"Index of max element: {GetIndexOfMaxElement(array)}");
+        }
+
+        public static (int, int) GetIndexOfMaxElement(int[,] a)
+        {
+
+            int max = a[0, 0];
+            int maxIndexRows = 0;
+            int maxIndexColum = 0;
+            for (int i = 0; i < a.GetLength(0); i++)
+            {
+                for (int j = 0; j < a.GetLength(1); j++)
+                {
+                    if (a[i, j] > max)
+                    {
+                        max = a[i, j];
+                        maxIndexRows = i;
+                        maxIndexColum = j;
+                    }
+                }
+            }
+            return (maxIndexRows, maxIndexColum);
+        }
+
 
     }
 }
