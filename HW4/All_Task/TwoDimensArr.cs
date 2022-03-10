@@ -72,5 +72,34 @@ namespace All_Task
             return min;
         }
 
+        public static void SolveTask2()
+        {
+            Console.Write("Enter the number of rows: ");
+            int n = Convert.ToInt32(Console.ReadLine());
+            Console.Write("Enter the number of columns: ");
+            int m = Convert.ToInt32(Console.ReadLine());
+            int[,] array = CreateAnTwoDimArrayWithRandom(n, m);
+            Console.WriteLine("Your array: ");
+            OutputAnTwoDimArrayToTheConsole(array);
+            Console.Write($"Maximum array element: {GetMaxElementTwoDimArray(array)}");
+        }
+
+        public static int GetMaxElementTwoDimArray(int[,] a)
+        {
+
+            int max = a[0, 0];
+            for (int i = 0; i < a.GetLength(0); i++)
+            {
+                for (int j = 0; j < a.GetLength(1); j++)
+                {
+                    if (a[i, j] > max)
+                    {
+                        max = a[i, j];
+                    }
+                }
+            }
+            return max;
+        }
+
     }
 }
