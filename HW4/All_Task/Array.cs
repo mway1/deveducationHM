@@ -204,6 +204,31 @@ namespace All_Task
             return count;
         }
 
+        public static void SolveTask8()
+        {
+            Console.Write("Enter the length of the array: ");
+            int[] array = CreateAnArrayWithRandom(Convert.ToInt32(Console.ReadLine()));
+            Console.Write($"Array: ");
+            OutputAnArrayToTheConsole(array);
+            int[] tmp = SwapHalfsOfArr(array);
+            Console.Write($"\nSort by bubble sort array: ");
+            OutputAnArrayToTheConsole(tmp);
+        }
+
+        public static int[] SwapHalfsOfArr(int[] a)
+        {
+            int[] newArr = CopyArray(a);
+            int n = newArr.Length / 2;
+            for (int i = 0; i < n; i++)
+            {
+                newArr[i] += newArr[n + i];
+                newArr[n + i] = newArr[i] - newArr[n + i];
+                newArr[i] = newArr[i] - newArr[n + i];
+            }
+            return newArr;
+        }
+
+
         public static void SolveTask9()
         {
             Console.Write("Enter the length of the array: ");

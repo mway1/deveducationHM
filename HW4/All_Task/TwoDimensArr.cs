@@ -101,5 +101,38 @@ namespace All_Task
             return max;
         }
 
+        public static void SolveTask3()
+        {
+            Console.Write("Enter the number of rows: ");
+            int n = Convert.ToInt32(Console.ReadLine());
+            Console.Write("Enter the number of columns: ");
+            int m = Convert.ToInt32(Console.ReadLine());
+            int[,] array = CreateAnTwoDimArrayWithRandom(n, m);
+            Console.WriteLine("Your array: ");
+            OutputAnTwoDimArrayToTheConsole(array);
+            Console.Write($"Element with mininmum index: {GetIndexOfMinElement(array)}");
+        }
+
+        public static (int,int) GetIndexOfMinElement(int[,] a)
+        {
+
+            int min = a[0, 0];
+            int minIndexRows = 0;
+            int minIndexColum = 0;
+            for (int i = 0; i < a.GetLength(0); i++)
+            {
+                for (int j = 0; j < a.GetLength(1); j++)
+                {
+                    if (a[i, j] < min)
+                    {
+                        min = a[i, j];
+                        minIndexRows = i;
+                        minIndexColum = j;
+                    }
+                }
+            }
+            return (minIndexRows,minIndexColum);
+        }
+
     }
 }
