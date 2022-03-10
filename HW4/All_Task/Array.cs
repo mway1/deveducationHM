@@ -8,8 +8,13 @@ namespace All_Task
     {
         public static int[] CreateAnArrayWithRandom(int count)
         {
+            if (count < 0)
+            {
+                throw new Exception("lenght must be < 0");
+            }
             int[] array = new int[count];
             Random rnd = new Random();
+           
             for (int i = 0; i < count; i++)
             {
                 array[i] = rnd.Next(-100, 100);
