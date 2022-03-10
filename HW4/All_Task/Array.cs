@@ -10,7 +10,7 @@ namespace All_Task
         {
             if (count < 0)
             {
-                throw new Exception("lenght must be < 0");
+                throw new Exception("lenght must be > 0");
             }
             int[] array = new int[count];
             Random rnd = new Random();
@@ -234,6 +234,40 @@ namespace All_Task
             }
             return newArr;
         }
+
+        public static void SolveTask10()
+        {
+            Console.Write("Enter the length of the array: ");
+            int[] array = CreateAnArrayWithRandom(Convert.ToInt32(Console.ReadLine()));
+            Console.Write($"Array: ");
+            OutputAnArrayToTheConsole(array);
+            int[] tmp = SortDescendingSelectSort(array);
+            Console.Write($"\nSort by select sort array: ");
+            OutputAnArrayToTheConsole(tmp);
+        }
+
+        public static int[] SortDescendingSelectSort(int[] a)
+        {
+
+            int[] newArr = CopyArray(a);
+            for (int i = 0; i < newArr.Length; i++)
+            {
+                int min = i;
+                for (int j = i + 1; j < newArr.Length; j++)
+                {
+                    if (newArr[j] > newArr[min])
+                    {
+                        min = j;
+                    }
+                }
+                int temp = newArr[min];
+                newArr[min] = newArr[i];
+                newArr[i] = temp;
+            }
+            return newArr;
+        }
+
+
 
 
 

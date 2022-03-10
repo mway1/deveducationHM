@@ -10,7 +10,7 @@ namespace All_Task
         {
             if (n < 0 || m < 0)
             {
-                throw new Exception("lenght must be < 0");
+                throw new Exception("lenght must be > 0");
             }
             int[,] array = new int[n,m];
             Random rnd = new Random();
