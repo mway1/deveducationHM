@@ -146,7 +146,7 @@ namespace All_Task
         {
 
             int sumIndex = 0;
-            for (int i = 1; i < a.Length; i++)
+            for (int i = 0; i < a.Length; i++)
             {
                 if (i%2!=0)
                 {
@@ -194,7 +194,7 @@ namespace All_Task
         {
 
             int count = 0;
-            for (int i = 1; i < a.Length; i++)
+            for (int i = 0; i < a.Length; i++)
             {
                 if (a[i] % 2 != 0)
                 {
@@ -202,6 +202,37 @@ namespace All_Task
                 }
             }
             return count;
+        }
+
+        public static void SolveTask9()
+        {
+            Console.Write("Enter the length of the array: ");
+            int[] array = CreateAnArrayWithRandom(Convert.ToInt32(Console.ReadLine()));
+            Console.Write($"Array: ");
+            OutputAnArrayToTheConsole(array);
+            int[] tmp = SortAscendingBubbleSort(array);
+            Console.Write($"\nSort by bubble sort array: ");
+            OutputAnArrayToTheConsole(tmp);
+        }
+
+        public static int[] SortAscendingBubbleSort(int[] a)
+        {
+
+            int[] newArr = CopyArray(a);
+            int temp;
+            for (int i = 0; i < newArr.Length; i++)
+            {
+                for (int j = i + 1; j < newArr.Length; j++)
+                {
+                    if (newArr[i] > newArr[j])
+                    {
+                        temp = newArr[i];
+                        newArr[i] = newArr[j];
+                        newArr[j] = temp;
+                    }
+                }
+            }
+            return newArr;
         }
 
 
