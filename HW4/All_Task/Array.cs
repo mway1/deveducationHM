@@ -211,7 +211,7 @@ namespace All_Task
             Console.Write($"Array: ");
             OutputAnArrayToTheConsole(array);
             int[] tmp = SwapHalfsOfArr(array);
-            Console.Write($"\nSort by bubble sort array: ");
+            Console.Write($"\nSwap array: ");
             OutputAnArrayToTheConsole(tmp);
         }
 
@@ -219,11 +219,13 @@ namespace All_Task
         {
             int[] newArr = CopyArray(a);
             int n = newArr.Length / 2;
+            int step = n + newArr.Length % 2;
+            int qqq = newArr.Length % 2 == 0 ? n : n + 1;
             for (int i = 0; i < n; i++)
             {
-                newArr[i] += newArr[n + i];
-                newArr[n + i] = newArr[i] - newArr[n + i];
-                newArr[i] = newArr[i] - newArr[n + i];
+                int tmp = newArr[i];
+                newArr[i] = newArr[i + step];
+                newArr[i + step] = tmp;
             }
             return newArr;
         }
