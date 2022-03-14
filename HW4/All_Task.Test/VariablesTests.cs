@@ -83,5 +83,21 @@ namespace All_Task.Test
             Assert.Throws<Exception>(() => Variables.GetTheRootOfTheEquation(a, b, c));
         }
 
+        [TestCase(2,3,1,2, "y=1*x+(1)*x")]
+        [TestCase(-2,3,-1,0, "y=-3*x+(-3)*x")]
+        public void GetEquationOfStraightLineTest(int x1, int y1, int x2, int y2, string expected)
+        {
+            string actual = Variables.GetEquationOfStraightLine(x1,y1,x2,y2);
+            Assert.AreEqual(expected, actual);
+
+        }
+
+        [TestCase(1,2,1,3)]
+        [TestCase(-5,7,-5,0)]
+        public void GetEquationOfStraightLineTest_WhenX1EqualX2_ShouldThrowException(int x1, int y1, int x2, int y2)
+        {
+            Assert.Throws<Exception>(() => Variables.GetEquationOfStraightLine(x1, y1, x2, y2));
+        }
+
     }
 }
