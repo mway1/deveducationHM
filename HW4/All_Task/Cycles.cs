@@ -16,6 +16,31 @@ namespace All_Task
             return number;
         }
 
+        public static int[] GetSequenceThatMultipleOfA(int a)//HW3-Task2
+        {
+            if (a == 0)
+            {
+                throw new Exception("Cannot be divided by zero");
+            }
+            int count=0;
+            for (int i = a; i <= 1000; i+=a)
+            {
+                count++;
+            }
+            int[] array = new int[count];
+            int tmp=0;
+            for (int i = a; i <= 1000; i++)
+            {
+                if (i % a == 0)
+                {
+                    array[tmp] = i;
+                    tmp++;
+                }
+            }
+            return array;
+
+        }
+
         public static int GetCountPositiveNum(int a)//HW3-Task3
         {
             int count = 0;
