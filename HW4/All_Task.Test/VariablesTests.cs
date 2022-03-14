@@ -21,5 +21,20 @@ namespace All_Task.Test
             Assert.AreEqual(expected2, actual2);
 
         }
+
+        [TestCase(2,3,19)]
+        [TestCase(15,4,-8)]
+        [TestCase(11,22,49)]
+        [TestCase(-1,4,2)]
+        [TestCase(0,7,7)]
+        public void GetSolvingTheFormulaTest(int a, int b, int expected)
+        {
+            int actual = Variables.GetSolvingTheFormula(a, b);
+            Assert.AreEqual(expected, actual);
+
+        }
+
+
+
     }
 }
