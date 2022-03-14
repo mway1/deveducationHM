@@ -105,6 +105,10 @@ namespace All_Task
         
         public static string SolutionOfEquation(int a, int b,int c)//HW2-Task4 
         {
+            if (a == 0)
+            {
+                throw new Exception("a must be > 0");
+            }
 
             double d = FindDiscriminant(a,b,c);
 
@@ -126,6 +130,10 @@ namespace All_Task
 
         public static string GetTheNumberInWords(int number)//HW2-Task5
         {
+            if (number < 10 || number > 99)
+            {
+                throw new Exception("the number should be two-digit");
+            }
             string result = " ";
             string Dec = " ";
             string Un = " ";
