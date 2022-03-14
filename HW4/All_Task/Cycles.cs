@@ -176,6 +176,75 @@ namespace All_Task
             return NewNum;
         }
 
+        public static int FindEvenNum(int n)
+        {
+            int decade;
+            int countEven = 0;
+            for (int i = 0; i < n; i++)
+            {
+
+                int tmp = i;
+                int summEven = 0;
+                int summOdd = 0;
+                while (tmp != 0)
+                {
+                    decade = tmp % 10;
+                    if (tmp % 2 == 0)
+                    {
+                        summEven += decade;
+                    }
+                    else
+                    {
+                        summOdd += decade;
+                    }
+                    tmp /= 10;
+                }
+                if (summEven > summOdd)
+                {
+                    countEven++;
+                }
+            }
+            return countEven;
+        }
+        public static int[] GetNumWithMostEvenDigits(int n)//HW3-Task 11
+        {
+            if (n < 0)
+            {
+                throw new Exception("N must be > 0");
+            }
+            int countEven = FindEvenNum(n);
+            int decade;
+            int[] array = new int[countEven];
+            int count = 0;
+
+            for (int i = 0; i < n; i++)
+            {
+                int tmp = i;
+                int summEven = 0;
+                int summOdd = 0;
+                while (tmp != 0)
+                {
+                    decade = tmp % 10;
+                    if (tmp % 2 == 0)
+                    {
+                        summEven += decade;
+                    }
+                    else
+                    {
+                        summOdd += decade;
+                    }
+                    tmp /= 10;
+                }
+                if (summEven > summOdd)
+                {
+                    array[count] = i;
+                    count++;
+                }
+            }
+
+            return array;
+
+        }
         public static bool FindOutIdenticalNum(int a, int b)//HW3-Task12
         {
             int tmp1 = 0;
