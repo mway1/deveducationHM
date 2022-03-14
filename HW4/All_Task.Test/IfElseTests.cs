@@ -13,5 +13,17 @@ namespace All_Task.Test
             int actual = IfElse.GetTheResultOfMathActions(a, b);
             Assert.AreEqual(expected, actual);
         }
+
+        
+        [TestCase(1,2, Quarters.I)]
+        [TestCase(-1,2, Quarters.II)]
+        [TestCase(-3,-4, Quarters.III)]
+        [TestCase(5,-6, Quarters.IV)]
+        [TestCase(0,-7, Quarters.OnAxis)]
+        public void DetermineInWhichQuarterTest(int x, int y, Quarters expected)
+        {
+            Quarters actual = IfElse.DetermineInWhichQuarter(x, y);
+            Assert.AreEqual(expected, actual);
+        }
     }
 }

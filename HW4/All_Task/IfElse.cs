@@ -2,18 +2,18 @@
 using System.Collections.Generic;
 using System.Text;
 
+public enum Quarters
+{
+    I,
+    II,
+    III,
+    IV,
+    OnAxis
+}
 namespace All_Task
 {
     public static class IfElse
     {
-        public enum Quarters
-        {
-            I,
-            II,
-            III,
-            IV,
-            OnAxis
-        }
         public static int GetTheResultOfMathActions(int a, int b)//HW2-Task1
         {
             int result;
