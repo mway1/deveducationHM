@@ -6,6 +6,14 @@ namespace All_Task
 {
     public static class IfElse
     {
+        public enum Quarters
+        {
+            I,
+            II,
+            III,
+            IV,
+            OnAxis
+        }
         public static int GetTheResultOfMathActions(int a, int b)//HW2-Task1
         {
             int result;
@@ -23,24 +31,29 @@ namespace All_Task
             }
             return result;
         }
-        public static string DetermineInWhichQuarter(int x, int y)//HW2-Task2
+        public static Quarters DetermineInWhichQuarter(int x, int y)//HW2-Task2
         {
-            string result;
+            Quarters result;
+
             if (x > 0 && y > 0)
             {
-                result = "FIRST";
+                result = Quarters.I;
             }
             else if (x < 0 && y > 0)
             {
-                result = "SECOND";
+                result = Quarters.II;
             }
             else if (x < 0 && y < 0)
             {
-                result = "THIRD";
+                result = Quarters.III;
+            }
+            else if (x > 0 && y < 0)
+            {                             
+                result = Quarters.IV;
             }
             else
-            {                             //Поменять условие
-                result = "FOURTH";
+            {
+                result = Quarters.OnAxis;
             }
             return result;
         }
