@@ -4,7 +4,7 @@ using System.Text;
 
 namespace All_Task
 {
-    static class IfElse
+    public static class IfElse
     {
         public static int GetTheResultOfMathActions(int a, int b)//HW2-Task1
         {

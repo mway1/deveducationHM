@@ -4,7 +4,7 @@ using System.Text;
 
 namespace All_Task
 {
-    static class Cycles
+    public static class Cycles
     {
         public static int RaiseNumberToDegree(int a, int b)//HW3-Task1
         {

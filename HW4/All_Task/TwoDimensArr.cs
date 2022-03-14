@@ -4,7 +4,7 @@ using System.Text;
 
 namespace All_Task
 {
-    static class TwoDimensArr
+    public static class TwoDimensArr
     {
         public static int[,] CreateAnTwoDimArrayWithRandom(int n,int m)
         {

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace All_Task
 {
-    static class ArrayTasks
+    public static class ArrayTasks
     {
         public static int[] CreateAnArrayWithRandom(int count)
         {
