@@ -22,6 +22,16 @@ namespace All_Task.Test
 
         }
 
+        [TestCase(2,0)]
+        [TestCase(-2,0)]
+        public void GetResultsDivRemainderTest_WhenBEqualZero_ShouldThrowException(int a, int b)
+        {
+            int rez1;
+            int rez2;
+            Assert.Throws<Exception>(() => Variables.GetResultsDivRemainder(a, b, out rez1, out rez2));
+
+        }
+
         [TestCase(2,3,19)]
         [TestCase(15,4,-8)]
         [TestCase(11,22,49)]
@@ -50,8 +60,6 @@ namespace All_Task.Test
             Assert.AreEqual(expected2, actual2);
 
         }
-
-
 
     }
 }
