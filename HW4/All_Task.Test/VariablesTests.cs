@@ -34,6 +34,23 @@ namespace All_Task.Test
 
         }
 
+        [TestCase(2,3,3,2)]
+        [TestCase(-1,7,7,-1)]
+        [TestCase(23,0,0,23)]
+        [TestCase(157,24,24,157)]
+        [TestCase(2031,-57,-57,2031)]
+        public void SwapNumbersTest(int a, int b, int expected1, int expected2)
+        {
+            int actual1;
+            int actual2;
+
+            Variables.SwapNumbers(a, b, out actual1, out actual2);
+
+            Assert.AreEqual(expected1, actual1);
+            Assert.AreEqual(expected2, actual2);
+
+        }
+
 
 
     }
