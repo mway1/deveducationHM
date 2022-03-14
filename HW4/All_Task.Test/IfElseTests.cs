@@ -25,5 +25,16 @@ namespace All_Task.Test
             Quarters actual = IfElse.DetermineInWhichQuarter(x, y);
             Assert.AreEqual(expected, actual);
         }
+
+        [TestCase(2,7,5,new int[] {2,5,7})]
+        [TestCase(8,0,4,new int[] {0,4,8})]
+        [TestCase(-8,24,3,new int[] {-8,3,24})]
+        public void SortInAscendingOrderTest(int a, int b, int c, int[] expected)
+        {
+            int[] actual = IfElse.SortInAscendingOrder(a, b, c);
+            Assert.AreEqual(expected, actual);
+        }
+
+
     }
 }
