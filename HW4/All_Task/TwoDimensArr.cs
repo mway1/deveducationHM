@@ -166,6 +166,41 @@ namespace All_Task
             return (maxIndexRows, maxIndexColum);
         }
 
+        public static void SolveTask5()
+        {
+            Console.Write("Enter the number of rows: ");
+            int n = Convert.ToInt32(Console.ReadLine());
+            Console.Write("Enter the number of columns: ");
+            int m = Convert.ToInt32(Console.ReadLine());
+            int[,] array = CreateAnTwoDimArrayWithRandom(n, m);
+            Console.WriteLine("Your array: ");
+            OutputAnTwoDimArrayToTheConsole(array);
+            Console.Write($"Count of max element: {FindCountBiggerElementsOfNeighbours(array)}");
+        }
+
+        public static int FindCountBiggerElementsOfNeighbours(int[,] a)
+        {
+
+            int count = 0;
+
+
+            for (int i = 0; i < a.GetLength(0); i++)
+            {
+                for (int j = 0; j < a.GetLength(1); j++)
+                {
+                    if ((i == 0 || a[i, j] > a[i - 1, j])
+                        && (i == a.GetLength(0) - 1 || a[i, j] > a[i + 1, j])
+                        && (j == 0 || a[i, j] > a[i, j - 1])
+                        && (j == a.GetLength(1) - 1 || a[i, j] > a[i, j + 1]))
+                    {
+                        count++;
+                    }
+                }
+            }
+            return count;
+        }
+
+
 
     }
 }
