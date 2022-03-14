@@ -2,7 +2,7 @@ using NUnit.Framework;
 
 namespace HW4.Test
 {
-    public class Tests
+    public class VariablesTest
     {
         [SetUp]
         public void Setup()
