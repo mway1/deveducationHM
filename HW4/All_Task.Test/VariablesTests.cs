@@ -44,6 +44,13 @@ namespace All_Task.Test
 
         }
 
+        [TestCase(2,2)]
+        [TestCase(-5,-5)]
+        public void GetSolvingTheFormulaTest_WhenAEqualB_ShouldThrowException(int a, int b)
+        {
+            Assert.Throws<Exception>(() => Variables.GetSolvingTheFormula(a, b));
+        }
+
         [TestCase(2,3,3,2)]
         [TestCase(-1,7,7,-1)]
         [TestCase(23,0,0,23)]
