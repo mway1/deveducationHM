@@ -54,8 +54,6 @@ namespace All_Task.Test
         [TestCase(2,3,3,2)]
         [TestCase(-1,7,7,-1)]
         [TestCase(23,0,0,23)]
-        [TestCase(157,24,24,157)]
-        [TestCase(2031,-57,-57,2031)]
         public void SwapNumbersTest(int a, int b, int expected1, int expected2)
         {
             int actual1;
@@ -66,6 +64,23 @@ namespace All_Task.Test
             Assert.AreEqual(expected1, actual1);
             Assert.AreEqual(expected2, actual2);
 
+        }
+
+        [TestCase(2,3,1,-1.0)]
+        [TestCase(2,0,-5,-2.5)]
+        [TestCase(2,3,-1.5,-2.25)]
+        public void GetTheRootOfTheEquationTest(double a,double b,double c, double expected)
+        {
+            double actual = Variables.GetTheRootOfTheEquation(a, b, c);
+            Assert.AreEqual(expected, actual);
+
+        }
+
+        [TestCase(0,1,5)]
+        [TestCase(0,-1.5,25)]
+        public void GetTheRootOfTheEquationTest_WhenAEqualZero_ShouldThrowException(double a, double b,double c)
+        {
+            Assert.Throws<Exception>(() => Variables.GetTheRootOfTheEquation(a, b, c));
         }
 
     }
