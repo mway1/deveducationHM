@@ -200,7 +200,36 @@ namespace All_Task
             return count;
         }
 
+        public static void SolveTask6()
+        {
+            Console.Write("Enter the number of rows: ");
+            int n = Convert.ToInt32(Console.ReadLine());
+            Console.Write("Enter the number of columns: ");
+            int m = Convert.ToInt32(Console.ReadLine());
+            int[,] array = CreateAnTwoDimArrayWithRandom(n, m);
+            Console.WriteLine("Your array: ");
+            OutputAnTwoDimArrayToTheConsole(array);
+            int[,] tmp = ReflectMainDiagonal(array);
+            Console.WriteLine($"Reflected relative to the main diagonal of the array: ");
+            OutputAnTwoDimArrayToTheConsole(tmp);
+        }
 
+        public static int[,] ReflectMainDiagonal(int[,] a)
+        {
+
+            int tmp;
+
+            for (int i = 0; i < a.GetLength(0); i++)
+            {
+                for (int j = i+1; j < a.GetLength(1); j++)
+                {
+                    tmp = a[i, j];
+                    a[i, j] = a[j, i];
+                    a[j, i] = tmp;
+                }
+            }
+            return a;
+        }
 
     }
 }
