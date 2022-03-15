@@ -75,5 +75,20 @@ namespace All_Task.Test
             int actual = Cycles.PrintSumNumFromRange(a, b);
             Assert.AreEqual(expected, actual);
         }
+
+        [TestCase(4,3)]
+        [TestCase(25, 75025)]
+        public void GetFromFibonacciSeriesTest(int n, int expected)
+        {
+            int actual = Cycles.GetFromFibonacciSeries(n);
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestCase(0)]
+        [TestCase(-27)]
+        public void GetFromFibonacciSeriesTest_WhenNEqualZero_ShouldThrowException(int n)
+        {
+            Assert.Throws<Exception>(() => Cycles.GetFromFibonacciSeries(n));
+        }
     }
 }
