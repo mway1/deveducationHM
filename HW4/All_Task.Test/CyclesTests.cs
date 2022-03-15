@@ -51,5 +51,20 @@ namespace All_Task.Test
             Assert.Throws<Exception>(() => Cycles.GetCountPositiveNum(a));
         }
 
+        [TestCase(100,50)]
+        [TestCase(27,9)]
+        [TestCase(2,1)]
+        public void OutputLargestDivisorTest(int a, int expected)
+        {
+            int actual = Cycles.OutputLargestDivisor(a);
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestCase(0)]
+        [TestCase(-27)]
+        public void OutputLargestDivisorTest_WhenAEqualZero_ShouldThrowException(int a)
+        {
+            Assert.Throws<Exception>(() => Cycles.OutputLargestDivisor(a));
+        }
     }
 }
