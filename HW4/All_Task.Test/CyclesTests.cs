@@ -156,5 +156,20 @@ namespace All_Task.Test
         {
             Assert.Throws<Exception>(() => Cycles.PrintNumberInReverse(a));
         }
+
+        [TestCase(21, new int[] {2,4,6,8,12,14,16,18,20})]
+        [TestCase(5, new int[] {2,4})]
+        public void GetNumWithMostEvenDigitsTest(int n, int[] expected)
+        {
+            int[] actual = Cycles.GetNumWithMostEvenDigits(n);
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestCase(-15)]
+        public void GetNumWithMostEvenDigitsTest_WhenNLowerZero_ShouldThrowException(int n)
+        {
+            Assert.Throws<Exception>(() => Cycles.GetNumWithMostEvenDigits(n));
+        }
+
     }
 }
