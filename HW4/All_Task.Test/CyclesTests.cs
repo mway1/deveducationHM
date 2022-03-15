@@ -35,5 +35,21 @@ namespace All_Task.Test
             Assert.Throws<Exception>(() => Cycles.GetSequenceThatMultipleOfA(a));
         }
 
+        [TestCase(10,3)]
+        [TestCase(100,9)]
+        [TestCase(27,5)]
+        public void GetCountPositiveNumTest(int a, int expected)
+        {
+            int actual = Cycles.GetCountPositiveNum(a);
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestCase(0)]
+        [TestCase(-2)]
+        public void GetCountPositiveNumTest_WhenAEqualZero_ShouldThrowException(int a)
+        {
+            Assert.Throws<Exception>(() => Cycles.GetCountPositiveNum(a));
+        }
+
     }
 }
