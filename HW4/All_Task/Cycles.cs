@@ -8,6 +8,10 @@ namespace All_Task
     {
         public static int RaiseNumberToDegree(int a, int b)//HW3-Task1
         {
+            if (b <= 0)
+            {
+                throw new Exception("B should be >0");
+            }
             int number = 1;
             for (int i = 0; i < b; i++)
             {
@@ -43,6 +47,10 @@ namespace All_Task
 
         public static int GetCountPositiveNum(int a)//HW3-Task3
         {
+            if (a <= 0)
+            {
+                throw new Exception(" A must be > 0");
+            }
             int count = 0;
             for (int i = 1; i < a; i++)
             {
@@ -56,6 +64,10 @@ namespace All_Task
 
         public static int OutputLargestDivisor(int a)//HW3-Task4
         {
+            if (a <= 0)
+            {
+                throw new Exception(" A must be > 0");
+            }
             int maxDivisor = 0;
             for (int i = 1; i < a; i++)
             {
@@ -93,6 +105,10 @@ namespace All_Task
 
         public static int GetFromFibonacciSeries(int n)//HW3-Task6
         {
+            if (n <= 0)
+            {
+                throw new Exception(" N must be > 0");
+            }
             int num1 = 1;
             int num2 = 1;
             int i = 0;
@@ -109,6 +125,11 @@ namespace All_Task
 
         public static int GetDivisorFromEuclidAlgo(int a, int b)//HW3-Task7
         {
+            if (a <= 0 || b <= 0)
+            {
+                throw new Exception("A and B should be >0");
+            }
+
             int nod;
             while (a != 0 && b != 0)
             {
@@ -127,6 +148,10 @@ namespace All_Task
 
         public static int FindRootByHalfDivision(int n)//HW3-Task8 
         {
+            if (n <= 0)
+            {
+                throw new Exception(" N must be > 0");
+            }
             int a = 0;
             int b = n;
             int tmp = 0;
@@ -148,22 +173,30 @@ namespace All_Task
 
         public static int FindNumberOfOdd(int a)//HW3-Task9
         {
+            if (a <= 0)
+            {
+                throw new Exception("A must be >0");
+            }
             int tmp;
             int count = 0;
             while (a != 0)
             {
                 tmp = a % 10;
-                a /= 10;
                 if (tmp % 2 != 0)
                 {
                     count++;
                 }
+                a /= 10;
             }
             return count;
         }
 
         public static int PrintNumberInReverse(int a)//HW3-Task10
         {
+            if (a <= 0)
+            {
+                throw new Exception("A must be >0");
+            }
             int tmp;
             int NewNum = 0;
             while (a != 0)
@@ -247,6 +280,10 @@ namespace All_Task
         }
         public static bool FindOutIdenticalNum(int a, int b)//HW3-Task12
         {
+            if (a <= 0 || b <= 0)
+            {
+                throw new Exception("A and B should be >0");
+            }
             int tmp1 = 0;
             int tmp2 = 0;
             bool res = false;
