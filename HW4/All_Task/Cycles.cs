@@ -15,7 +15,7 @@ namespace All_Task
             int number = 1;
             for (int i = 0; i < b; i++)
             {
-                number *= b;
+                number *= a;
             }
             return number;
         }
