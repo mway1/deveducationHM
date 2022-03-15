@@ -90,5 +90,23 @@ namespace All_Task.Test
         {
             Assert.Throws<Exception>(() => Cycles.GetFromFibonacciSeries(n));
         }
+
+        [TestCase(24,100,4)]
+        [TestCase(33,45,3)]
+        [TestCase(158,987,1)]
+        public void GetDivisorFromEuclidAlgoTest(int a, int b, int expected)
+        {
+            int actual = Cycles.GetDivisorFromEuclidAlgo(a, b);
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestCase(22,-15)]
+        [TestCase(100,0)]
+        [TestCase(-25,125)]
+        [TestCase(0,540)]
+        public void GetDivisorFromEuclidAlgoTest_WhenBorALowerOrEqualZero_ShouldThrowException(int a, int b)
+        {
+            Assert.Throws<Exception>(() => Cycles.GetDivisorFromEuclidAlgo(a, b));
+        }
     }
 }
