@@ -116,7 +116,7 @@ namespace All_Task
             return b * b - 4 * a * c;
         }
         
-        public static string SolutionOfEquation(int a, int b,int c)//HW2-Task4 
+        public static double[] SolutionOfEquation(int a, int b,int c)//HW2-Task4 
         {
             if (a == 0)
             {
@@ -124,18 +124,28 @@ namespace All_Task
             }
 
             double d = FindDiscriminant(a,b,c);
+            double x1;
+            double x2;
 
             if (d < 0)
             {
-                return "The equation has no roots";
+
+                double[] result = new double[0];
+                return result;
             }
             else if (d == 0)
             {
-                return $"x = {(-b) / (2 * a)}";
+                x1 = (-b) / (2 * a);
+                double[] result = new double[1] {x1};
+                return result;
+
             }
             else
             {
-                return $"x1 = {(-b - Math.Sqrt(d)) / (2 * a)}; x2 = {(-b + Math.Sqrt(d)) / (2 * a)}";
+                x1 = (-b - Math.Sqrt(d)) / (2 * a);
+                x2 = (-b + Math.Sqrt(d)) / (2 * a);
+                double[] result = new double[2] {x1,x2};
+                return result;
             }
         }
 
