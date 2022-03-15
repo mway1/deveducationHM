@@ -35,6 +35,25 @@ namespace All_Task.Test
             Assert.AreEqual(expected, actual);
         }
 
+
+        [TestCase(1, -4, -5, new double[] { -1, 5 })]
+        [TestCase(1, 8, 16, new double[] { -4 })]
+        [TestCase(5, 3, 7, new double[] { })]
+        public void SolutionOfEquationTest(int a, int b, int c, double[] expected)
+        {
+            double[] actual = IfElse.SolutionOfEquation(a, b, c);
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestCase(0,15,23)]
+        [TestCase(0,-5,7)]
+        [TestCase(0,2,0)]
+        public void SolutionOfEquationTest_WhenAEqualZero_ShouldThrowException(int a, int b, int c)
+        {
+            Assert.Throws<Exception>(() => IfElse.SolutionOfEquation(a, b, c));
+
+        }
+
         [TestCase(22, "Двадцать два")]
         [TestCase(91, "Девяносто один")]
         public void GetTheNumberInWordsTest(int number, string expected)
@@ -42,6 +61,7 @@ namespace All_Task.Test
             string actual = IfElse.GetTheNumberInWords(number);
             Assert.AreEqual(expected, actual);
         }
+
 
         [TestCase(7)]
         [TestCase(121)]
