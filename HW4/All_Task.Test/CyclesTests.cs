@@ -108,5 +108,20 @@ namespace All_Task.Test
         {
             Assert.Throws<Exception>(() => Cycles.GetDivisorFromEuclidAlgo(a, b));
         }
+
+        [TestCase(27,3)]
+        [TestCase(125,5)]
+        public void FindRootByHalfDivisionTest(int number, int expected)
+        {
+            int actual = Cycles.FindRootByHalfDivision(number);
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestCase(0)]
+        [TestCase(-27)]
+        public void FindRootByHalfDivisionTest_WhenNumLowerOrEqualZero_ShouldThrowException(int number)
+        {
+            Assert.Throws<Exception>(() => Cycles.FindRootByHalfDivision(number));
+        }
     }
 }

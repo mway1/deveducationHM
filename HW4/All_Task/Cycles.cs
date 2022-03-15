@@ -146,29 +146,29 @@ namespace All_Task
             return nod;
         } 
 
-        public static int FindRootByHalfDivision(int n)//HW3-Task8 
+        public static int FindRootByHalfDivision(int number)//HW3-Task8 
         {
-            if (n <= 0)
+            if (number <= 0)
             {
-                throw new Exception(" N must be > 0");
+                throw new Exception(" number must be > 0");
             }
             int a = 0;
-            int b = n;
-            int tmp = 0;
+            int b = number;
+            int half = 0;
 
-            while (Math.Pow(tmp, 3) != n)
+            while (half*half*half != number)
             {
-                tmp = (a + b) / 2;
-                if (Math.Pow(tmp, 3) < n)
+                half = (a + b) / 2;
+                if (half * half * half < number)
                 {
-                    a = tmp;
+                    a = half;
                 }
                 else
                 {
-                    b = tmp;
+                    b = half;
                 }
             }
-            return tmp;
+            return half;
         }          
 
         public static int FindNumberOfOdd(int a)//HW3-Task9
