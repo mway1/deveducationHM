@@ -66,5 +66,14 @@ namespace All_Task.Test
         {
             Assert.Throws<Exception>(() => Cycles.OutputLargestDivisor(a));
         }
+
+        [TestCase(1,100,735)]
+        [TestCase(25,-15,21)]
+        [TestCase(47,0,147)]
+        public void PrintSumNumFromRangeTest(int a, int b, int expected)
+        {
+            int actual = Cycles.PrintSumNumFromRange(a, b);
+            Assert.AreEqual(expected, actual);
+        }
     }
 }
