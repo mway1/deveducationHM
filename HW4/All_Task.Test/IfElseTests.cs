@@ -35,6 +35,21 @@ namespace All_Task.Test
             Assert.AreEqual(expected, actual);
         }
 
+        [TestCase(22, "Двадцать два")]
+        [TestCase(91, "Девяносто один")]
+        public void GetTheNumberInWordsTest(int number, string expected)
+        {
+            string actual = IfElse.GetTheNumberInWords(number);
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestCase(7)]
+        [TestCase(121)]
+        public void GetTheNumberInWordsTest_WhenNumHigerNinetyNineAndLessTen_ShouldThrowException(int number)
+        {
+            Assert.Throws<Exception>(() => IfElse.GetTheNumberInWords(number));
+
+        }
 
     }
 }
