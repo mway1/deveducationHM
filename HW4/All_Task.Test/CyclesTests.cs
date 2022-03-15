@@ -123,5 +123,22 @@ namespace All_Task.Test
         {
             Assert.Throws<Exception>(() => Cycles.FindRootByHalfDivision(number));
         }
+
+
+        [TestCase(125,2)]
+        [TestCase(20,0)]
+        [TestCase(241,1)]
+        public void FindNumberOfOddTest(int a, int expected)
+        {
+            int actual = Cycles.FindNumberOfOdd(a);
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestCase(0)]
+        [TestCase(-135)]
+        public void FindNumberOfOddTest_WhenNumLowerOrEqualZero_ShouldThrowException(int a)
+        {
+            Assert.Throws<Exception>(() => Cycles.FindNumberOfOdd(a));
+        }
     }
 }
