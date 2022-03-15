@@ -171,5 +171,21 @@ namespace All_Task.Test
             Assert.Throws<Exception>(() => Cycles.GetNumWithMostEvenDigits(n));
         }
 
+        [TestCase(123, 3456789, true)]
+        [TestCase(500, 99, false)]
+        public void FindOutIdenticalNumTest(int a, int b, bool expected)
+        {
+            bool actual = Cycles.FindOutIdenticalNum(a, b);
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestCase(-21, 123)]
+        [TestCase(0, 7582)]
+        [TestCase(387893, -1)]
+        [TestCase(34,0)]
+        public void FindOutIdenticalNumTest_WhenBorALowerOrEqualZero_ShouldThrowException(int a, int b)
+        {
+            Assert.Throws<Exception>(() => Cycles.FindOutIdenticalNum(a, b));
+        }
     }
 }

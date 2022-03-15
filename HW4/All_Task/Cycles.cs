@@ -288,7 +288,7 @@ namespace All_Task
             int tmp2 = 0;
             bool res = false;
 
-            while (b != 0)
+            while (a != 0)
             {
                 tmp1 = a % 10;
                 for (int i = b; i != 0; i /= 10)
