@@ -136,9 +136,25 @@ namespace All_Task.Test
 
         [TestCase(0)]
         [TestCase(-135)]
-        public void FindNumberOfOddTest_WhenNumLowerOrEqualZero_ShouldThrowException(int a)
+        public void FindNumberOfOddTest_WhenALowerOrEqualZero_ShouldThrowException(int a)
         {
             Assert.Throws<Exception>(() => Cycles.FindNumberOfOdd(a));
+        }
+
+        [TestCase(125, 521)]
+        [TestCase(20, 02)]
+        [TestCase(241, 142)]
+        public void PrintNumberInReverseTest(int a, int expected)
+        {
+            int actual = Cycles.PrintNumberInReverse(a);
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestCase(0)]
+        [TestCase(-15)]
+        public void PrintNumberInReverseTest_WhenALowerOrEqualZero_ShouldThrowException(int a)
+        {
+            Assert.Throws<Exception>(() => Cycles.PrintNumberInReverse(a));
         }
     }
 }
