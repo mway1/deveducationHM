@@ -20,5 +20,20 @@ namespace All_Task.Test
         {
             Assert.Throws<Exception>(() => Cycles.RaiseNumberToDegree(a, b));
         }
+
+        [TestCase(100,new int[] {100,200,300,400,500,600,700,800,900,1000})]
+        [TestCase(250,new int[] {250,500,750,1000})]
+        public void GetSequenceThatMultipleOfATest(int a, int[] expected)
+        {
+            int[] actual = Cycles.GetSequenceThatMultipleOfA(a);
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestCase(0)]
+        public void GetSequenceThatMultipleOfATest_WhenAEqualZero_ShouldThrowException(int a)
+        {
+            Assert.Throws<Exception>(() => Cycles.GetSequenceThatMultipleOfA(a));
+        }
+
     }
 }
