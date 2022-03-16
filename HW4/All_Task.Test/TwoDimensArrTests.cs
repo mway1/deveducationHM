@@ -73,6 +73,24 @@ namespace All_Task.Test
             Assert.Throws<Exception>(() => TwoDimensArr.GetIndexOfMinElement(array));
         }
 
+        [TestCase(TDAMockType.first, 1)]
+        [TestCase(TDAMockType.second, 4)]
+        [TestCase(TDAMockType.third, 1)]
+        public void FindCountBiggerElementsOfNeighboursTest(TDAMockType type, int expected)
+        {
+            int[,] array = TDMock.GetMock(type);
+            int actual = TwoDimensArr.FindCountBiggerElementsOfNeighbours(array);
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestCase(TDAMockType.empty)]
+        public void FindCountBiggerElementsOfNeighboursTest_WhenLenghtLessOne_ShouldThrowException(TDAMockType type)
+        {
+            int[,] array = TDMock.GetMock(type);
+            Assert.Throws<Exception>(() => TwoDimensArr.GetIndexOfMinElement(array));
+        }
+
+
 
     }
 }
