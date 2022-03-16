@@ -124,5 +124,37 @@ namespace All_Task.Test
         {
             Assert.Throws<Exception>(() => ArrayTasks.SwapHalfsOfArr(a));
         }
+
+        [TestCase(new int[] {24,15,38,1,0}, new int[] {0,1,15,24,38})]
+        [TestCase(new int[] {12,-1,-9,8,6,3}, new int[] {-9,-1,3,6,8,12})]
+        public void SortAscendingBubbleSortTest(int[] a, int[] expected)
+        {
+            int[] actual = ArrayTasks.SortAscendingBubbleSort(a);
+            Assert.AreEqual(expected, actual);
+        }
+
+
+        [TestCase(new int[] { })]
+        public void SortAscendingBubbleSortTest_WhenALowerOne_ShouldThrowException(int[] a)
+        {
+            Assert.Throws<Exception>(() => ArrayTasks.SortAscendingBubbleSort(a));
+        }
+
+        [TestCase(new int[] { 24, 15, 38, 1, 0 }, new int[] {38,24,15,1,0})]
+        [TestCase(new int[] { 12, -1, -9, 8, 6, 3 }, new int[] {12,8,6,3,-1,-9})]
+        public void SortDescendingSelectSortTest(int[] a, int[] expected)
+        {
+            int[] actual = ArrayTasks.SortDescendingSelectSort(a);
+            Assert.AreEqual(expected, actual);
+        }
+
+
+        [TestCase(new int[] { })]
+        public void SortDescendingSelectSortTest_WhenALowerOne_ShouldThrowException(int[] a)
+        {
+            Assert.Throws<Exception>(() => ArrayTasks.SortDescendingSelectSort(a));
+        }
+
+
     }
 }
