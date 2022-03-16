@@ -48,7 +48,10 @@ namespace All_Task
 
         public static int GetMinElementArray(int[] a)
         {
-
+            if (a.Length < 1)
+            {
+                throw new Exception("length of array must be >0");
+            }
             int min = a[0];
             for (int i = 1; i < a.Length; i++)
             {
@@ -71,7 +74,10 @@ namespace All_Task
 
         public static int GetMaxElementArray(int[] a)
         {
-
+            if (a.Length < 1)
+            {
+                throw new Exception("length of array must be >0");
+            }
             int max = a[0];
             for (int i = 1; i < a.Length; i++)
             {
@@ -94,7 +100,10 @@ namespace All_Task
 
         public static int GetMinIndexArray(int[] a)
         {
-
+            if (a.Length < 1)
+            {
+                throw new Exception("length of array must be >0");
+            }
             int min = a[0];
             int minIndex = 0;
             for (int i = 1; i < a.Length; i++)
@@ -119,7 +128,10 @@ namespace All_Task
 
         public static int GetMaxIndexArray(int[] a)
         {
-
+            if (a.Length < 1)
+            {
+                throw new Exception("length of array must be >0");
+            }
             int max = a[0];
             int maxIndex = 0;
             for (int i = 1; i < a.Length; i++)
@@ -144,7 +156,10 @@ namespace All_Task
 
         public static int GetSumElementWithOddIndexArray(int[] a)
         {
-
+            if (a.Length < 1)
+            {
+                throw new Exception("length of array must be >0");
+            }
             int sumIndex = 0;
             for (int i = 0; i < a.Length; i++)
             {
@@ -170,6 +185,10 @@ namespace All_Task
 
         public static int[] GetReverseOfArray(int[] a)
         {
+            if (a.Length < 1)
+            {
+                throw new Exception("length of array must be >0");
+            }
             int[] newArr = CopyArray(a);
             for (int i = 0; i < newArr.Length / 2; i++)
             {
@@ -192,7 +211,10 @@ namespace All_Task
 
         public static int GetCountOddElementOfArray(int[] a)
         {
-
+            if (a.Length < 1)
+            {
+                throw new Exception("length of array must be >0");
+            }
             int count = 0;
             for (int i = 0; i < a.Length; i++)
             {
@@ -217,6 +239,10 @@ namespace All_Task
 
         public static int[] SwapHalfsOfArr(int[] a)
         {
+            if (a.Length < 1)
+            {
+                throw new Exception("length of array must be >0");
+            }
             int[] newArr = CopyArray(a);
             int n = newArr.Length / 2;
             int step = n + newArr.Length % 2;
@@ -244,7 +270,10 @@ namespace All_Task
 
         public static int[] SortAscendingBubbleSort(int[] a)
         {
-
+            if (a.Length < 1)
+            {
+                throw new Exception("length of array must be >0");
+            }
             int[] newArr = CopyArray(a);
             int temp;
             for (int i = 0; i < newArr.Length; i++)
@@ -275,7 +304,10 @@ namespace All_Task
 
         public static int[] SortDescendingSelectSort(int[] a)
         {
-
+            if (a.Length < 1)
+            {
+                throw new Exception("length of array must be >0");
+            }
             int[] newArr = CopyArray(a);
             for (int i = 0; i < newArr.Length; i++)
             {
