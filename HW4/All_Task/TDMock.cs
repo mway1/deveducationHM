@@ -39,7 +39,7 @@ namespace All_Task
 
 
                 default:
-                    throw new Exception("a.GetLength(0) and a.GetLength(1) must be > 0");
+                    throw new Exception("rows and columns should be >0");
 
                 case TDAMockType.reflectFirst:
                     return new int[,]

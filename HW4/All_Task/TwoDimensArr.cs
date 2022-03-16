@@ -57,7 +57,10 @@ namespace All_Task
 
         public static int GetMinElementTwoDimArray(int[,] a)
         {
-
+            if (a.GetLength(0) < 1 || a.GetLength(1) < 1)
+            {
+                throw new Exception("rows and columns should be >0");
+            }
             int min = a[0,0];
             for (int i = 0; i < a.GetLength(0); i++)
             {
@@ -86,7 +89,10 @@ namespace All_Task
 
         public static int GetMaxElementTwoDimArray(int[,] a)
         {
-
+            if (a.GetLength(0) < 1 || a.GetLength(1) < 1)
+            {
+                throw new Exception("rows and columns should be >0");
+            }
             int max = a[0, 0];
             for (int i = 0; i < a.GetLength(0); i++)
             {
@@ -115,7 +121,10 @@ namespace All_Task
 
         public static (int,int) GetIndexOfMinElement(int[,] a)
         {
-
+            if (a.GetLength(0) < 1 || a.GetLength(1) < 1)
+            {
+                throw new Exception("rows and columns should be >0");
+            }
             int min = a[0, 0];
             int minIndexRows = 0;
             int minIndexColum = 0;
@@ -147,7 +156,10 @@ namespace All_Task
 
         public static (int, int) GetIndexOfMaxElement(int[,] a)
         {
-
+            if (a.GetLength(0) < 1 || a.GetLength(1) < 1)
+            {
+                throw new Exception("rows and columns should be >0");
+            }
             int max = a[0, 0];
             int maxIndexRows = 0;
             int maxIndexColum = 0;
@@ -180,10 +192,11 @@ namespace All_Task
 
         public static int FindCountBiggerElementsOfNeighbours(int[,] a)
         {
-
+            if (a.GetLength(0) < 1 || a.GetLength(1) < 1)
+            {
+                throw new Exception("rows and columns should be >0");
+            }
             int count = 0;
-
-
             for (int i = 0; i < a.GetLength(0); i++)
             {
                 for (int j = 0; j < a.GetLength(1); j++)
@@ -216,7 +229,10 @@ namespace All_Task
 
         public static int[,] ReflectMainDiagonal(int[,] a)
         {
-
+            if (a.GetLength(0) < 1 || a.GetLength(1) < 1)
+            {
+                throw new Exception("rows and columns should be >0");
+            }
             int tmp;
 
             for (int i = 0; i < a.GetLength(0); i++)
