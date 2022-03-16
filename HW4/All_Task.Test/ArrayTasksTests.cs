@@ -94,5 +94,35 @@ namespace All_Task.Test
         {
             Assert.Throws<Exception>(() => ArrayTasks.GetReverseOfArray(a));
         }
+
+        [TestCase(new int[] { 2, 3, 4, 5, 6, 7, 8 }, 3)]
+        [TestCase(new int[] { -6, -4, 14, -2, 0 }, 0)]
+        public void GetCountOddElementOfArrayTest(int[] a, int expected)
+        {
+            int actual = ArrayTasks.GetCountOddElementOfArray(a);
+            Assert.AreEqual(expected, actual);
+        }
+
+
+        [TestCase(new int[] { })]
+        public void GetCountOddElementOfArrayTest_WhenALowerOne_ShouldThrowException(int[] a)
+        {
+            Assert.Throws<Exception>(() => ArrayTasks.GetCountOddElementOfArray(a));
+        }
+
+        [TestCase(new int[] { 2, 3, 4, 5, 6, 7, 8 }, new int[] {6,7,8,5,2,3,4})]
+        [TestCase(new int[] { -6, -4, 14, -2}, new int[] {14,-2,-6,-4})]
+        public void SwapHalfsOfArrTest(int[] a, int[] expected)
+        {
+            int[] actual = ArrayTasks.SwapHalfsOfArr(a);
+            Assert.AreEqual(expected, actual);
+        }
+
+
+        [TestCase(new int[] { })]
+        public void SwapHalfsOfArrTest_WhenALowerOne_ShouldThrowException(int[] a)
+        {
+            Assert.Throws<Exception>(() => ArrayTasks.SwapHalfsOfArr(a));
+        }
     }
 }
