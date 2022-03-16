@@ -70,7 +70,7 @@ namespace All_Task.Test
         public void GetIndexOfMaxElementTest_WhenLenghtLessOne_ShouldThrowException(TDAMockType type)
         {
             int[,] array = TDMock.GetMock(type);
-            Assert.Throws<Exception>(() => TwoDimensArr.GetIndexOfMinElement(array));
+            Assert.Throws<Exception>(() => TwoDimensArr.GetIndexOfMaxElement(array));
         }
 
         [TestCase(TDAMockType.first, 1)]
@@ -87,7 +87,24 @@ namespace All_Task.Test
         public void FindCountBiggerElementsOfNeighboursTest_WhenLenghtLessOne_ShouldThrowException(TDAMockType type)
         {
             int[,] array = TDMock.GetMock(type);
-            Assert.Throws<Exception>(() => TwoDimensArr.GetIndexOfMinElement(array));
+            Assert.Throws<Exception>(() => TwoDimensArr.FindCountBiggerElementsOfNeighbours(array));
+        }
+
+        [TestCase(TDAMockType.first, TDAMockType.reflectFirst)]
+        [TestCase(TDAMockType.second, TDAMockType.reflectSecond)]
+        public void ReflectMainDiagonalTest(TDAMockType type, TDAMockType type2)
+        {
+            int[,] array = TDMock.GetMock(type);
+            int[,] expected = TwoDimensArr.ReflectMainDiagonal(array);
+            int[,] actual = TwoDimensArr.ReflectMainDiagonal(array);
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestCase(TDAMockType.empty)]
+        public void ReflectMainDiagonalTest_WhenLenghtLessOne_ShouldThrowException(TDAMockType type)
+        {
+            int[,] array = TDMock.GetMock(type);
+            Assert.Throws<Exception>(() => TwoDimensArr.ReflectMainDiagonal(array));
         }
 
 
