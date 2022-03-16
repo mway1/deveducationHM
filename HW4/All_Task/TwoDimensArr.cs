@@ -119,15 +119,14 @@ namespace All_Task
             Console.Write($"Index of min element: {GetIndexOfMinElement(array)}");
         }
 
-        public static (int,int) GetIndexOfMinElement(int[,] a)
+        public static string GetIndexOfMinElement(int[,] a)
         {
             if (a.GetLength(0) < 1 || a.GetLength(1) < 1)
             {
                 throw new Exception("rows and columns should be >0");
             }
             int min = a[0, 0];
-            int minIndexRows = 0;
-            int minIndexColum = 0;
+            string indexMin = "";
             for (int i = 0; i < a.GetLength(0); i++)
             {
                 for (int j = 0; j < a.GetLength(1); j++)
@@ -135,12 +134,11 @@ namespace All_Task
                     if (a[i, j] < min)
                     {
                         min = a[i, j];
-                        minIndexRows = i;
-                        minIndexColum = j;
+                        indexMin = $"({i},{j})";
                     }
                 }
             }
-            return (minIndexRows,minIndexColum);
+            return indexMin;
         }
         public static void SolveTask4()
         {
@@ -154,15 +152,14 @@ namespace All_Task
             Console.Write($"Index of max element: {GetIndexOfMaxElement(array)}");
         }
 
-        public static (int, int) GetIndexOfMaxElement(int[,] a)
+        public static string GetIndexOfMaxElement(int[,] a)
         {
             if (a.GetLength(0) < 1 || a.GetLength(1) < 1)
             {
                 throw new Exception("rows and columns should be >0");
             }
             int max = a[0, 0];
-            int maxIndexRows = 0;
-            int maxIndexColum = 0;
+            string indexMax = "";
             for (int i = 0; i < a.GetLength(0); i++)
             {
                 for (int j = 0; j < a.GetLength(1); j++)
@@ -170,12 +167,11 @@ namespace All_Task
                     if (a[i, j] > max)
                     {
                         max = a[i, j];
-                        maxIndexRows = i;
-                        maxIndexColum = j;
+                        indexMax = $"({i},{j})";
                     }
                 }
             }
-            return (maxIndexRows, maxIndexColum);
+            return indexMax;
         }
 
         public static void SolveTask5()
