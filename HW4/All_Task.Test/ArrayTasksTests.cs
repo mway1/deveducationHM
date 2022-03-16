@@ -64,5 +64,35 @@ namespace All_Task.Test
         {
             Assert.Throws<Exception>(() => ArrayTasks.GetMaxIndexArray(a));
         }
+
+        [TestCase(new int[] { 2, 3, 4, 5, 6, 7, 8 }, 15)]
+        [TestCase(new int[] { -5, -4, 7, -2, -1, 0 }, -6)]
+        public void GetSumElementWithOddIndexArrayTest(int[] a, int expected)
+        {
+            int actual = ArrayTasks.GetSumElementWithOddIndexArray(a);
+            Assert.AreEqual(expected, actual);
+        }
+
+
+        [TestCase(new int[] { })]
+        public void GetSumElementWithOddIndexArrayTest_WhenALowerOne_ShouldThrowException(int[] a)
+        {
+            Assert.Throws<Exception>(() => ArrayTasks.GetSumElementWithOddIndexArray(a));
+        }
+
+        [TestCase(new int[] { 2, 3, 4, 5, 6, 7, 8 }, new int[] {8, 7 ,6 ,5 ,4 ,3 ,2})]
+        [TestCase(new int[] { -5, -4, 7, -2, -1, 0 }, new int[] {0, -1, -2, 7, -4, -5})]
+        public void GetReverseOfArrayTest(int[] a, int[] expected)
+        {
+            int[] actual = ArrayTasks.GetReverseOfArray(a);
+            Assert.AreEqual(expected, actual);
+        }
+
+
+        [TestCase(new int[] { })]
+        public void GetReverseOfArrayTest_WhenALowerOne_ShouldThrowException(int[] a)
+        {
+            Assert.Throws<Exception>(() => ArrayTasks.GetReverseOfArray(a));
+        }
     }
 }
