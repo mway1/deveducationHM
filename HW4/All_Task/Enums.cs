@@ -18,7 +18,9 @@ namespace All_Task
         first,
         second,
         third,
-        empty
+        empty,
+        reflectFirst,
+        reflectSecond,
     }
 
 }
