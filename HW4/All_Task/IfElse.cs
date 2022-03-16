@@ -2,14 +2,6 @@
 using System.Collections.Generic;
 using System.Text;
 
-public enum Quarters
-{
-    I,
-    II,
-    III,
-    IV,
-    OnAxis
-}
 namespace All_Task
 {
     public static class IfElse
